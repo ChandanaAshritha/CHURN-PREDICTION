@@ -11,7 +11,7 @@ def main():
     model = joblib.load('models/best_model.pkl')
 
     print("📂 Loading test data...")
-    df_test = load_and_clean_data('data/test.csv')
+    df_test = load_and_clean_data('data/Test.csv')
     customer_ids = df_test.index.copy()
 
     df_test = encode_categorical_features(df_test)
@@ -41,4 +41,5 @@ def main():
         print("✅ Format validated against sample_submission.xlsx")
 
 if __name__ == "__main__":
+
     main()
