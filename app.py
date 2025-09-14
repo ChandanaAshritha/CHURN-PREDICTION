@@ -28,8 +28,8 @@ def load_model():
 
 @st.cache_data
 def load_train_data():
-    if os.path.exists('data/train.csv'):
-        df = pd.read_csv('data/train.csv')
+    if os.path.exists('data/Train.csv'):
+        df = pd.read_csv('data/Train.csv')
         df = df.rename(columns=FEATURE_MAPPING)
         if 'labels' not in df.columns:
             df['labels'] = df.iloc[:, -1]
