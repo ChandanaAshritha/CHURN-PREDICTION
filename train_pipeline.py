@@ -12,7 +12,7 @@ def main():
 
     setup_project_directories()
 
-    df = load_and_clean_data('data/train.csv')
+    df = load_and_clean_data('data/Train.csv')
     df = encode_categorical_features(df)
     df = handle_outliers(df, df.columns[:-1])
 
@@ -68,4 +68,5 @@ def main():
     print("🎉 Training pipeline completed!")
 
 if __name__ == "__main__":
+
     main()
